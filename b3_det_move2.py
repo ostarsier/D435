@@ -12,16 +12,16 @@ from b2_utils import encode_image_to_base64, base64_to_pyobj, draw_detections, e
 
 import math
 
-web_request_url = f"http://192.168.110.24:{8002}/get_realsense_data"#
-web_request_url_det = f"http://192.168.110.91:{8001}/obj_det"
+web_request_url = f"http://192.168.110.91:{8002}/get_realsense_data"#
+web_request_url_det = f"http://192.168.110.91:{8003}/obj_det"
 moveit_url = "http://192.168.110.91:8080/move"
 redis_host="192.168.110.24"
 #移动到初始位置
-print("移动到初始位置")
+# print("移动到初始位置")
 P_zero = [-0.00013586,-0.29682,-0.17101]
 quat_zero = [-0.6191, 0.33828, 0.62199, -0.33971]
-rt=move(moveit_url,P_zero[0], P_zero[1], P_zero[2], quat_zero[0], quat_zero[1], quat_zero[2], quat_zero[3])
-time.sleep(1)
+# rt=move(moveit_url,P_zero[0], P_zero[1], P_zero[2], quat_zero[0], quat_zero[1], quat_zero[2], quat_zero[3])
+# time.sleep(1)
 """
 Response body:
 {
